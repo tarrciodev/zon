@@ -30,7 +30,7 @@ export async function getCategoryServices(): Promise<ICategoryServices[]> {
 export async function getCategoriesAndServices(): Promise<
     ICategoriesAndServices[]
 > {
-    const data = (await useClient.request(GET_CATEGORIES_AND_SERVICES)) as {
+    const data = await useClient.request(GET_CATEGORIES_AND_SERVICES) as {
         servicesCategories: ICategoriesAndServices[];
     };
     return data.servicesCategories;

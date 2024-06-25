@@ -1,27 +1,22 @@
+import withPlaiceholder from "@plaiceholder/next";
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const config = {
     images: {
         remotePatterns: [
             {
                 protocol: "https",
                 hostname: "github.com",
-                pathname: "/**",
-                port: "",
-            },
-            {
-                protocol: "https",
-                hostname: "images.ctfassets.net",
-                pathname: "/**",
-                port: "",
             },
             {
                 protocol: "https",
                 hostname: "sa-east-1.graphassets.com",
-                pathname: "/**",
-                port: "",
+            },
+            {
+                protocol: "https",
+                hostname: "lh3.googleusercontent.com",
             },
         ],
     },
 };
 
-export default nextConfig;
+export default withPlaiceholder(config);

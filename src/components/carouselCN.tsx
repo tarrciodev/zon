@@ -1,15 +1,14 @@
 "use client";
 import * as React from "react";
-import Image from 'next/image'
+import Image from "next/image"
 import Autoplay from "embla-carousel-autoplay";
 import heroIlustration from "@/assets/hero.json";
+import Link from "next/link"
 
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
 } from "@/components/ui/carousel";
 import { IGetBanners } from "@/actions/get-banners";
 import { LottieServer } from "./lottie-server";
@@ -54,9 +53,12 @@ export function CarouselCN({
                                             o Crescimento do Seu Negócio
                                         </p>
                                         <div className='flex gap-4'>
-                                            <button className='rounded py-2 px-2 bg-blue-950 text-blue-50'>
+                                            <Link
+                                                href='https://wa.link/dqe6fu'
+                                                className='rounded py-2 px-2 bg-blue-950 text-blue-50'
+                                            >
                                                 Contacte-nos
-                                            </button>
+                                            </Link>
                                             <button className='rounded py-2 px-2 gb-green-700 border border-blue-950 text-blue-950'>
                                                 Quem Somos
                                             </button>
@@ -95,7 +97,7 @@ export function CarouselCN({
                             <div>
                                 <div className='w-[35rem] -mt-24'>
                                     <Image
-                                        src={banner.cover.url}
+                                        src={banner?.cover?.url}
                                         width={500}
                                         height={500}
                                         alt='t'

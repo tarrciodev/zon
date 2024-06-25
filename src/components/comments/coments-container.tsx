@@ -1,13 +1,12 @@
-import { commentsData } from '@/utils/comment-data';
-import React from 'react'
-import { UserComment } from './user-comment';
+import { getFeedbacks } from "@/actions/get-feedbacks";
 
-export  function CommentsContainer() {
-  return (
-      <div className='grid grid-cols-2 gap-4'>
-          {commentsData.map((comment, i) => (
-              <UserComment key={i} comment={comment} />
-          ))}
-      </div>
-  );
+import { UsersComments } from "./user-comment";
+
+export async function CommentsContainer() {
+    const feedbacks = await getFeedbacks();
+    return (
+        <div>
+            <UsersComments feedbacks={feedbacks} />
+        </div>
+    );
 }

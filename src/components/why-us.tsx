@@ -22,16 +22,32 @@ export function WhyChooseUs() {
             <Separator className='w-24 bg-green-700 h-1 rounded' />
             <p className='font-semibold text-4xl'>Porque Nos?</p>
             <div className='space-y-6'>
-                <p className='w-96 text-balance text-xl'>
-                    Na <span>ZON</span>, somos apaixonados por ajudar empresas
-                    como a sua a prosperarem no mundo digital.{" "}
+                <p className='text-balance text-lg'>
+                    <b className="font-medium text-lx">Experiência Comprovada: </b>
+                    Nossa equipe é composta por profissionais experientes e
+                    apaixonados por marketing, comprometidos com o sucesso dos
+                    nossos clientes.
                 </p>
 
-                <p className='w-96 text-balance text-xl'>
-                    Somos uma equipe experiente de profissionais de marketing
-                    digital, design e desenvolvimento web, dedicados a criar
-                    soluções inovadoras e personalizadas que impulsionam o
-                    crescimento dos negócios.
+                <p className='text-balance text-lg'>
+                    <b className="font-medium text-xl">Soluções Personalizadas: </b>
+                    Entendemos que cada empresa é única, por isso oferecemos
+                    soluções sob medida que se alinham com seus objetivos e
+                    desafios específicos.
+                </p>
+
+                <p className='text-balance text-lg'>
+                    <b className="font-medium text-xl">Resultados Mensuráveis: </b>
+                    Focamos em estratégias que entregam resultados tangíveis,
+                    utilizando métricas claras para medir o sucesso e ajustar as
+                    abordagens conforme necessário.
+                </p>
+
+                <p className='text-balance text-lg'>
+                    <b className="font-medium text-xl">Soluções Personalizadas: </b>
+                    Entendemos que cada empresa é única, por isso oferecemos
+                    soluções sob medida que se alinham com seus objetivos e
+                    desafios específicos.
                 </p>
             </div>
             <div className='flex gap-4'>

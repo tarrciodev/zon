@@ -8,7 +8,7 @@ export interface IGetDeeds {
 }
 
 export async function getDeeds(): Promise<IGetDeeds[]> {
-    const data = (await useClient.request(GET_DEEDS)) as {
+    const data = await useClient.request(GET_DEEDS) as {
         deeds: IGetDeeds[]
     };
 

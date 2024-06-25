@@ -20,8 +20,8 @@ export default function Home() {
     return (
         <main className='h-screen bg-slate-200'>
             <Header />
-            <div className='px-56 bg-white'>
-                <Banner />
+            <div className='px-56 bg-white mt-24'>
+              <Banner/>
                 <div className='flex'>
                     <WhatWeCanOfferYou />
                     <Services />
@@ -30,7 +30,7 @@ export default function Home() {
                 <div className='mt-12 flex'>
                     <WhyChooseUs />
                     <MotionContainer>
-                        <CheckTheNumbers />
+                        <CheckTheNumbers/>
                     </MotionContainer>
                 </div>
                 <div className='mt-12'>
@@ -52,7 +52,6 @@ export default function Home() {
                 </div>
                 <Engaje />
                 <ThoughtsAboutUs />
-
                 <div className='mt-12'>
                     <div className='space-y-5'>
                         <p className='text-4xl font-semibold text-blue-950'>

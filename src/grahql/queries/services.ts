@@ -15,3 +15,12 @@ export const GET_SERVICE_BY_SLUG = gql`
         }
     }
 `;
+
+export const GET_SERVICES_TO_SITEMAP = gql`
+    query getServicesToSiteMap {
+        services {
+            slug
+            createdAt
+        }
+    }
+`;

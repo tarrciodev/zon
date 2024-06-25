@@ -1,42 +1,56 @@
 import { Quote } from "lucide-react";
-import Image from "next/image";
+import { BluredImage } from "../blured-image";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "../ui/carousel";
 
-interface IComment {
-    comment: {
-        text: string
-        user: {
-            avatarUrl: string
-            name: string
-            job: string
-        }
-    }
+interface IFeedback {
+    feedbacks: {
+        userName: string;
+        userEmail: string;
+        userAvatar?: string;
+        comment: string;
+    }[];
 }
 
-export function UserComment({comment}: IComment) {
+export function UsersComments({ feedbacks }: IFeedback) {
     return (
-        <div
-            className='flex flex-col gap-6 bg-gradient-to-r from-blue-200 to-blue-400 border-t-4 border-blue-950 py-6 px-8'
-        >
-            <div className='flex items-center gap-2'>
-                <p>
-                    {comment.text}
-                </p>
-
-                <Image
-                    src={comment.user.avatarUrl}
-                    width={50}
-                    height={50}
-                    alt='user image'
-                    className='size-20 rounded-full border-2 border-green-700'
-                />
-            </div>
-            <div className='flex justify-between'>
-                <p className='font-semibold text-blue-950'>{comment?.user?.name}</p>
-                <p className='font-semibold text-green-700'>{comment?.user?.job}</p>
-                <span>
-                    <Quote />
-                </span>
-            </div>
-        </div>
+        <Carousel>
+            <CarouselContent>
+                {feedbacks?.map((feedback) => (
+                    <CarouselItem
+                        className='flex gap-12  py-6 px-8'
+                        key={feedback.userEmail}
+                    >
+                        <div className='flex gap-2 items-center'>
+                            <BluredImage
+                                src={feedback.userAvatar as string}
+                                alt='user image'
+                                className='size-40 rounded-full border-2'
+                            />
+                            <div>
+                                <p className='text-3xl font-semibold'>
+                                    {feedback.userName}
+                                </p>
+                                <span>{feedback.userEmail}</span>
+                            </div>
+                        </div>
+                        <div className='flex flex-col gap-2 flex-1'>
+                            <Quote className='size-8 text-green-700 rotate-180' />
+                            <p className='text-2xl font-medium'>
+                                {feedback.comment}
+                            </p>
+                            <Quote className='size-8 text-blue-900 ml-auto' />
+                        </div>
+                    </CarouselItem>
+                ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+        </Carousel>
     );
 }

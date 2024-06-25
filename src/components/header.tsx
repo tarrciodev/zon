@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 export function Header() {
     return (
-        <header className='px-56 flex items-center bg-white'>
+        <header className='px-56 flex items-center bg-white fixed top-0 left-0 right-0 w-full z-50 shadow'>
             <Link href='/'>
                 <Image src={logo} alt='logo' width={100} height={50} />
             </Link>
