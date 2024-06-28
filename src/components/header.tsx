@@ -1,12 +1,14 @@
+"use client";
 import logo from "@/assets/logo.png";
 import { blogUrl } from "@/config/blog-url";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import { MenuServices } from "./menu-services";
 import { MobileHeader } from "./mobile/header";
 import { Button } from "./ui/button";
 
-export async function Header() {
+export function Header() {
     return (
         <>
             <div className='px-4 xl:px-40 items-center bg-white fixed top-0 left-0 right-0 z-50 shadow hidden sm:flex min-h-20'>
@@ -15,7 +17,9 @@ export async function Header() {
                 </Link>
                 <nav className='flex justify-end flex-1'>
                     <ul className='mr-72 flex gap-5 items-center'>
-                        <MenuServices />
+                        <Suspense>
+                            <MenuServices />
+                        </Suspense>
                         <Link href={`${blogUrl}`} target='blank'>
                             Blog
                         </Link>
@@ -26,7 +30,9 @@ export async function Header() {
                     </div>
                 </nav>
             </div>
-            <MobileHeader />
+            <Suspense>
+                <MobileHeader />
+            </Suspense>
         </>
     );
 }

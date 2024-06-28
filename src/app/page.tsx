@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <>
+        <main>
             <Header />
             <div className='sm:px-12 xl:px-40 mt-16 sm:mt-24'>
                 <Banner />
@@ -72,6 +72,6 @@ export default function Home() {
                 </div>
             </div>
             <Footer />
-        </>
+        </main>
     );
 }
