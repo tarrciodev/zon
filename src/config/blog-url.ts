@@ -1,0 +1,1 @@
+export  const blogUrl = process.env.BLOG_URL as string;

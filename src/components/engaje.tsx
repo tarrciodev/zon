@@ -12,7 +12,7 @@ export function Engaje() {
     const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
       <motion.div 
-      className="bg-[url('../assets/background.png')] bg-cover mt-12"
+      className="bg-[url('../assets/background.png')] bg-cover mt-12 hidden sm:flex"
       ref={ref}
       style={{
         scale: scaleProgress,

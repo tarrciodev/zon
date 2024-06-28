@@ -19,27 +19,32 @@ interface IFeedback {
 
 export function UsersComments({ feedbacks }: IFeedback) {
     return (
-        <Carousel>
+        <Carousel
+            opts={{
+                align: "center",
+            }}
+            className='w-full'
+        >
             <CarouselContent>
                 {feedbacks?.map((feedback) => (
                     <CarouselItem
-                        className='flex gap-12  py-6 px-8'
+                        className='flex flex-col gap-12  py-6 px-8 sm:flex-row'
                         key={feedback.userEmail}
                     >
                         <div className='flex gap-2 items-center'>
                             <BluredImage
                                 src={feedback.userAvatar as string}
                                 alt='user image'
-                                className='size-40 rounded-full border-2'
+                                className='size-12 xl:size-40 rounded-full border-2'
                             />
                             <div>
-                                <p className='text-3xl font-semibold'>
+                                <p className='text-xl xl:text-3xl font-semibold'>
                                     {feedback.userName}
                                 </p>
                                 <span>{feedback.userEmail}</span>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-2 flex-1'>
+                        <div className='flex flex-col gap-2 flex-1 px-12 relative'>
                             <Quote className='size-8 text-green-700 rotate-180' />
                             <p className='text-2xl font-medium'>
                                 {feedback.comment}

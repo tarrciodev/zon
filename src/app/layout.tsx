@@ -8,8 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "ZON | Digital ",
     description:
-        "Marketing Digital, Web Development, Mobile Development, Branding and Graphic Design",
-    keywords: "zon, Marketing Digital, Websites, Ecommerces, Aplicativos, Android, IOS, Links Partocinados, ADDS, Design Gráfico, Identidade Visual",
+        "ZON |Marketing Digital, Desenvolvimento Web e criação de Aplicativos, Branding Design Gráfico",
+    keywords:
+        "zon, Marketing Digital, Websites, Ecommerces, Aplicativos, Android, IOS, Links Partocinados, ADDS, Design Gráfico, Identidade Visual",
 };
 
 export default function RootLayout({
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body>
+            <body className='overflow-x-hidden flex flex-col h-screen'>
                 {children}
                 <Toaster position='bottom-left' />
             </body>

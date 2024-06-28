@@ -7,11 +7,12 @@ import { LinkedinIcon } from "./svg-icons/linkedin";
 import { WhatsappIcon } from "./svg-icons/whatsapp";
 import { Feedback } from "./feedback";
 import { Suspense } from "react";
+import { blogUrl } from "@/config/blog-url";
 
 export function Footer() {
     return (
-        <footer className='flex justify-between py-12 border-t mt-4 px-56 bg-gradient-to-r from-green-700 to-blue-950 text-white'>
-            <div>
+        <footer className='flex flex-col gap-5 sm:flex-row justify-between py-12 border-t mt-4 px-2 xl:px-40 bg-gradient-to-r from-green-700 to-blue-950 text-white'>
+            <div className='flex gap-6'>
                 <nav className='flex gap-4'>
                     <Link
                         href='https://wa.link/dqe6fu'
@@ -45,14 +46,13 @@ export function Footer() {
                         <Feedback />
                     </Suspense>
                 </nav>
+                <nav className='flex gap-6 items-center'>
+                    <Link href={`${blogUrl}`}>Blog</Link>
+                </nav>
             </div>
-            <nav className='flex gap-6 items-center'>
-                <Link href='/'>Home</Link>
-                <Link href='/'>Blog</Link>
-                <li className='flex items-center gap-2 ml-12'>
-                    <Copyright /> 2024 ZON lda. All rights reserved.
-                </li>
-            </nav>
+            <div className='flex items-center justify-center gap-2 sm:ml-12'>
+                <Copyright /> 2024 ZON lda. All rights reserved.
+            </div>
         </footer>
     );
 }

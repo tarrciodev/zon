@@ -1,11 +1,10 @@
-"use client"
-import { IGetDeeds } from '@/actions/get-deeds';
-import React, { useEffect, useState, useRef } from 'react'
+"use client";
+import { useState } from "react";
 import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger"
+import ScrollTrigger from "react-scroll-trigger";
 
-export  function Deed({ deed }) {
-    const [counterOn, setCounterOn] = useState(false)
+export function Deed({ deed }) {
+    const [counterOn, setCounterOn] = useState(false);
     return (
         <div className='space-y-3'>
             <div className='text-green-400 font-semibold text-3xl flex'>

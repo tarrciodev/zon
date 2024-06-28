@@ -12,7 +12,7 @@ export function WhyChooseUs() {
     const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
     return (
         <motion.div
-            className='space-y-6 flex-1'
+            className='space-y-6 flex-1 px-2 sm:px-0'
             ref={ref}
             style={{
                 scale: scaleProgress,
@@ -20,40 +20,28 @@ export function WhyChooseUs() {
             }}
         >
             <Separator className='w-24 bg-green-700 h-1 rounded' />
-            <p className='font-semibold text-4xl'>Porque Nos?</p>
+            <p className='font-semibold text-4xl'>Porque Nós?</p>
             <div className='space-y-6'>
-                <p className='text-balance text-lg'>
-                    <b className="font-medium text-lx">Experiência Comprovada: </b>
+                <p className='text-balance text-lg flex flex-col'>
+                    <b className='font-medium text-lx'>COMPROMISSO </b>
+                    Na ZON, ajudamos as empresas a crescer e a alcançar
+                    novos patamares de sucesso através de estratégias de
+                    marketing inovadoras e personalizadas. Oferecemos uma ampla
+                    gama de serviços para atender às necessidades específicas do
+                    seu negócio, com resultados garantidos.
+                </p>
+                <p className='text-balance text-lg flex flex-col'>
+                    <b className='font-medium text-lx'>EXPERIÊNCIA: </b>
                     Nossa equipe é composta por profissionais experientes e
-                    apaixonados por marketing, comprometidos com o sucesso dos
-                    nossos clientes.
+                    apaixonados por inovação digital. Profissionais que
+                    acreditam e entendem que o sucesso dos nossos clientes é o
+                    sucesso da <em>ZON</em>
                 </p>
-
-                <p className='text-balance text-lg'>
-                    <b className="font-medium text-xl">Soluções Personalizadas: </b>
-                    Entendemos que cada empresa é única, por isso oferecemos
-                    soluções sob medida que se alinham com seus objetivos e
-                    desafios específicos.
+                <p className='text-balance text-lg flex flex-col'>
+                    <b className='font-medium text-xl'>Tempo de Resposta: </b>
+                    Nosso tempo médio de resposta é inferior a 24 horas,
+                    garantindo que você sempre tenha suporte quando precisar.
                 </p>
-
-                <p className='text-balance text-lg'>
-                    <b className="font-medium text-xl">Resultados Mensuráveis: </b>
-                    Focamos em estratégias que entregam resultados tangíveis,
-                    utilizando métricas claras para medir o sucesso e ajustar as
-                    abordagens conforme necessário.
-                </p>
-
-                <p className='text-balance text-lg'>
-                    <b className="font-medium text-xl">Soluções Personalizadas: </b>
-                    Entendemos que cada empresa é única, por isso oferecemos
-                    soluções sob medida que se alinham com seus objetivos e
-                    desafios específicos.
-                </p>
-            </div>
-            <div className='flex gap-4'>
-                <button className='rounded py-2 px-2 bg-blue-950 text-blue-50'>
-                    Contacte-nos
-                </button>
             </div>
         </motion.div>
     );

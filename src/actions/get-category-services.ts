@@ -17,11 +17,11 @@ export interface ICategoriesAndServices {
     services: {
         title: string;
         slug: string;
-    };
+    }[];
 }
 
 export async function getCategoryServices(): Promise<ICategoryServices[]> {
-    const data = (await useClient.request(GET_CATEGORIES)) as {
+    const data = await useClient.request(GET_CATEGORIES) as {
         servicesCategories: ICategoryServices[];
     };
     return data?.servicesCategories;

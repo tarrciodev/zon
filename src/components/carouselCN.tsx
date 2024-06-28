@@ -29,7 +29,7 @@ export function CarouselCN({
             opts={{
                 align: "start",
             }}
-            className='w-full'
+            className='w-[100dvw]'
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
         >
@@ -37,11 +37,14 @@ export function CarouselCN({
                 {banners?.map((banner) => {
                     if (banner.main) {
                         return (
-                            <CarouselItem className='flex' key={banner?.title}>
-                                <div className='flex flex-col max-w-[40vw]'>
-                                    <Separator className='w-24 bg-green-700 h-1 rounded' />
-                                    <div className='py-4 space-y-6'>
-                                        <h1 className='text-5xl font-semibold text-gray-800'>
+                            <CarouselItem
+                                className='flex flex-col-reverse sm:flex-row'
+                                key={banner?.title}
+                            >
+                                <div className='flex flex-col'>
+                                    <Separator className='w-24 bg-green-700 h-1 rounded mt-3 sm:mt-0' />
+                                    <div className='py-4 space-y-6  lg:w-[30vw]'>
+                                        <h1 className='text-xl sm:text-3xl xl:text-5xl font-semibold text-gray-800'>
                                             Sua Presença Digital:
                                             <span className='block text-balance'>
                                                 Construindo O Sucesso Online
@@ -66,7 +69,7 @@ export function CarouselCN({
                                     </div>
                                 </div>
                                 <div>
-                                    <div className='w-[35rem] -mt-24'>
+                                    <div className='sm:w-[35rem] sm:-mt-24'>
                                         <LottieServer
                                             animationData={heroIlustration}
                                         />
@@ -77,11 +80,14 @@ export function CarouselCN({
                     }
 
                     return (
-                        <CarouselItem className='flex' key={banner?.title}>
-                            <div className='flex flex-col max-w-[40vw]'>
-                                <Separator className='w-24 bg-green-700 h-1 rounded' />
+                        <CarouselItem
+                            className='flex flex-col-reverse sm:flex-row'
+                            key={banner?.title}
+                        >
+                            <div className='flex flex-col sm:max-w-[40vw]'>
+                                <Separator className='w-24 bg-green-700 h-1 rounded mt-3 sm:mt-0' />
                                 <div className='py-4 space-y-6'>
-                                    <h1 className='text-5xl font-semibold text-gray-800'>
+                                    <h1 className='text-xl sm:text-2xl xl:text-5xl font-semibold text-gray-800'>
                                         {banner.title}
                                     </h1>
                                     <p className='line-clamp-2 text-balance'>
@@ -95,7 +101,7 @@ export function CarouselCN({
                                 </div>
                             </div>
                             <div>
-                                <div className='w-[35rem] -mt-24'>
+                                <div className='sm:w-[35rem] -mt-24'>
                                     <Image
                                         src={banner?.cover?.url}
                                         width={500}
