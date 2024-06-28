@@ -16,12 +16,12 @@ Tenho interesse no servi√ßo ${plan.service} com o pacote ${plan.title}. Quais s√
 Obrigado(a)!`);
     return (
         <div className='bg-gradient-to-r from-green-700 to-blue-950 rounded-xl p-1 hover:from-purple-900 hover:to-pink-900'>
-            <div className='rounded-xl py-12 px-16 border border-gray-100 bg-white'>
-                <div>
+            <div className='rounded-xl py-12 px-6 xl:px-16 border border-gray-100 bg-white'>
+                <div className="flex flex-col justify-center items-center">
                     <p className='text-center text-2xl font-semibold'>
                         {plan.title}
                     </p>
-                    <span className='bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-950 text-center text-3xl'>
+                    <span className='bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-950 text-center text-xl sm:text-3xl'>
                         {`${new Intl.NumberFormat("pt-BR").format(
                             Number(plan?.price)
                         )}`}{" "}

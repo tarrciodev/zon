@@ -18,26 +18,31 @@ export const revalidate = 120
 export default async function Service({ params }: { params: { slug: string } }) {
     const service = await getServiceBySlug(params.slug);
     return (
-        <>
+        <main className="flex flex-col h-screen">
             <Header />
-            <div className='px-56 space-y-2 mt-24'>
+            <div className='px-4 xl:px-40 space-y-2 mt-24 flex-1'>
                 <h1 className='text-center text-3xl font-medium'>Princing</h1>
-                <p className='text-center text-lg'>
+                <p className='text-center text-lg px-2 sm:px-0'>
                     Escolha um plano e veje a magia acontecer
                 </p>
                 <div>
-                    <p className='text-center text-xl font-medium py-2'>
+                    <p className='text-center text-3xl sm:text-xl font-medium py-2'>
                         {service?.title}
                     </p>
-                    <div className='flex justify-center gap-12'>
-                        {service?.plans?.map(plan => {
-                            const parsedPlan = {...plan, service: service.title}
-                            return <PlanCard plan={parsedPlan} key={plan.title} />;
+                    <div className='flex flex-col sm:flex-row justify-center gap-3 lg:gap-12 px-4 sm:px-0'>
+                        {service?.plans?.map((plan) => {
+                            const parsedPlan = {
+                                ...plan,
+                                service: service.title,
+                            };
+                            return (
+                                <PlanCard plan={parsedPlan} key={plan.title} />
+                            );
                         })}
                     </div>
                 </div>
             </div>
-            <Footer/>
-        </>
+            <Footer />
+        </main>
     );
 }
