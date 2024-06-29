@@ -42,6 +42,7 @@ export default function Home() {
                             <Link
                                 href={`${blogUrl}`}
                                 className='text-green-600'
+                                target="_blank"
                             >
                                 Ver Todos Os Posts
                             </Link>

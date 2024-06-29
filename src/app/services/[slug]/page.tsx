@@ -29,7 +29,7 @@ export default async function Service({ params }: { params: { slug: string } }) 
                     <p className='text-center text-3xl sm:text-xl font-medium py-2'>
                         {service?.title}
                     </p>
-                    <div className='flex flex-col sm:flex-row justify-center gap-3 lg:gap-12 px-4 sm:px-0'>
+                    <div className='flex flex-col sm:flex-row justify-center gap-3 lg:gap-12 sm:px-0'>
                         {service?.plans?.map((plan) => {
                             const parsedPlan = {
                                 ...plan,

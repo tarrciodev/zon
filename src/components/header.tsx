@@ -20,7 +20,7 @@ export function Header() {
                         <Suspense>
                             <MenuServices />
                         </Suspense>
-                        <Link href={`${blogUrl}`} target='blank'>
+                        <Link href={`${blogUrl}`} target='_blank'>
                             Blog
                         </Link>
                     </ul>

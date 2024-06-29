@@ -47,7 +47,9 @@ export function Footer() {
                     </Suspense>
                 </nav>
                 <nav className='flex gap-6 items-center'>
-                    <Link href={`${blogUrl}`}>Blog</Link>
+                    <Link href={`${blogUrl}`} target='_blank'>
+                        Blog
+                    </Link>
                 </nav>
             </div>
             <div className='flex items-center justify-center gap-2 sm:ml-12'>

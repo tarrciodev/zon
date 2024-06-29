@@ -15,7 +15,7 @@ export function MobileHeader() {
                 <nav className='flex flex-1'>
                     <ul className='flex gap-5 items-center justify-center pl-6 sm:pl-0'>
                         <MenuServices />
-                        <Link href={`/${blogUrl}`}>Blog</Link>
+                        <Link href={`${blogUrl}`} target="_blank">Blog</Link>
                     </ul>
                 </nav>
                 <div className='flex gap-5 items-center justify-center'>

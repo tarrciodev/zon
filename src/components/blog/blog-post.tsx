@@ -11,7 +11,7 @@ interface IBlogPost {
 
 export default function BlogPost({ cover, title, excerpt, slug }: IBlogPost) {
     return (
-        <Link href={`${blogUrl}/post/${slug}`}>
+        <Link href={`${blogUrl}/post/${slug}`} target="_blank">
             <span className='rounded-lg overflow-hidden shadow-md sm:shadow-none'>
                 <BluredImage
                     src={cover?.url}
