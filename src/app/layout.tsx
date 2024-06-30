@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "ZON | Digital ",
+    title: "ZON",
     description:
         "ZON |Marketing Digital, Desenvolvimento Web e criação de Aplicativos, Branding Design Gráfico",
     keywords:

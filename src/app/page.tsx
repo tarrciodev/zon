@@ -57,10 +57,6 @@ export default function Home() {
                         <p className='text-4xl font-semibold text-blue-950'>
                             Contacte-nos
                         </p>
-                        <p className='w-96 text-balance'>
-                            Confie tambem, nos temos qualidade para ajudar seu
-                            negocio a cresce.
-                        </p>
                     </div>
                     <div className='sm:flex gap-8'>
                         <div className='sm:w-[35vw] '>

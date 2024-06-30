@@ -48,6 +48,7 @@ export function MenuServices() {
                                                         <Link
                                                             key={service.slug}
                                                             href={`/services/${service.slug}`}
+                                                            className="hover:text-blue-800"
                                                         >
                                                             {service.title}
                                                         </Link>

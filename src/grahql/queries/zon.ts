@@ -1,9 +1,13 @@
 import { gql } from "graphql-request";
 
-export const GET_ZON_WHATSAPP = gql`
-    query GetWhatsapp {
+export const GET_ZON_CONTACTS = gql`
+    query getZonContacts {
         zons {
-            whatsapp
+            whatsappLink
+            whatsappNumber
+            linkedin
+            instagram
+            facebook
         }
     }
 `;

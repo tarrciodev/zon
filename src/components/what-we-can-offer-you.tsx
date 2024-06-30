@@ -4,7 +4,7 @@ export function WhatWeCanOfferYou() {
     return (
         <div className='bg-blue-950 py-12 px-6 space-y-6 flex-1'>
             <p className='text-4xl text-blue-50 font-medium '>
-                Oque Podemos Te Oferecer?
+                O que Podemos Te Oferecer?
             </p>
             <div className='space-y-3 text-blue-100'>
                 <div className='flex gap-2 xl:w-[30rem] text-wrap text-lg justify-between'>

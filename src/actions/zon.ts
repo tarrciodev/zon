@@ -1,11 +1,10 @@
 import { useClient } from "@/grahql/client";
-import { GET_ZON_WHATSAPP } from "@/grahql/queries/zon";
+import { GET_ZON_CONTACTS } from "@/grahql/queries/zon";
 
-export async function getZonWhatSapp() {
-    const data = (await useClient.request(GET_ZON_WHATSAPP)) as {
-        zons: { whatsapp: string }[];
+export async function getZonContacts() {
+    const data = await useClient.request(GET_ZON_CONTACTS) as {
+        zons: { whatsappNumber: string, whatsappLink: string, facebook: string, instagram: string, linkedin: string }[];
     };
-    const whatsapp = data.zons[0].whatsapp;
-    console.log(whatsapp)
-    return whatsapp;
+    const contacts = data.zons[0]
+    return contacts;
 }

@@ -7,7 +7,7 @@ export function ThoughtsAboutUs() {
             <div>
                 <Separator className='w-24 bg-green-700 h-1 rounded' />
                 <p className='text-blue-950 text-4xl font-semibold pt-4'>
-                    Oque Outros <span className='block'>Acham de Nos?</span>
+                    O que Outros <span className='block'>Acham de Nos?</span>
                 </p>
             </div>
             <CommentsContainer />
